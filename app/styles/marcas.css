@@ -1,0 +1,264 @@
+
+
+.marcas-grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+    .marcas-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }    
+}
+@media (min-width: 992px) {
+    .marcas-grid{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4rem;
+    }  
+}
+
+.vistaProducto {
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+.descrip .h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.texto {
+    max-width: 90rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .texto {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .vistaProducto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.vistaProducto .imagen {
+    width: 30rem;
+}
+
+
+
+.vistaProducto .h1{
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 750;
+}
+
+.vistaProducto .h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.vistaProducto .h3 {
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.vistaProducto .precio {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.vistaProducto .botonCompra {
+    color: var(--black);
+    text-decoration: none;
+    padding: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: var(--primary) 5px solid;
+    border-radius: 15px;
+    transition-property: background-color;
+    transition-duration: .4s;
+}
+
+.vistaProducto .botonCompra:hover {
+    background-color: rgb(130, 130, 130);  
+    color: var(--white);
+}
+
+.carrusel {
+    max-width: 50rem;
+}
+
+.marca {
+    align-items: center;
+    background-color: #FBFCFC;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.marca .imagen {
+    border-radius: 15px;
+}
+
+.marca .contenido {
+    padding: 1rem;
+    text-align: center;
+}
+
+
+@media (max-width: 500px) {
+    .marca .contenido .texto {
+        font-size: 1.5rem;
+    }
+
+    .marca .precio {
+        color: black;
+        font-size: 1.8rem;
+        font-weight: 950;
+    }
+
+    .marca .distintivo {
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 950;
+    }
+}
+
+.marca .contenido .texto {
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+@media (min-width: 550px) {
+    .marca .contenido .texto {
+        font-size: 3rem;
+    }
+
+    .marca .precio {
+        color: black;
+        font-size: 3rem;
+        margin: 0;
+        font-weight: 900;
+    }
+
+    .marca .distintivo {
+        color: black;
+        font-size: 2rem;
+        font-weight: 950;
+    }       
+}
+
+.marca .descripcion {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+
+
+.marca .enlace {
+    margin-top: 2rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.marca .enlace:hover {
+    background-color: var(--primary);
+}
+
+.contenedor .marcasInde {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@media (max-width: 550px) {
+    .contenedor .marcasInde .logo {
+        width: 8rem;
+        margin: 0;        
+    }   
+}
+
+.carruselpromocion {
+    max-width: 40%;
+}
+
+@media (max-width: 550px) {
+    .carruselpromocion {
+        max-width: 100%;
+    }
+}
+.carrusel {
+    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0px;
+}
+
+.carrusel img {
+    object-fit: cover;
+    object-fit: cover;
+    transition: 1s;
+}
+.carrusel img:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+.modal-container{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal-container.active {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container img {
+    z-index: 1;
+}
+
+.modal-container.active::after {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba( 0, 0, 0, 0.56 );
+    z-index: 0;
+}
+

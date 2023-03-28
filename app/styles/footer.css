@@ -1,0 +1,18 @@
+.footer .texto{
+    color: var(--negro);
+}
+.texto:hover{
+    color: var(--primary);
+}
+.footer .span{
+    color: var(--primary);
+}
+.iconos{
+    gap: 5rem;
+}
+@media (max-width: 500px){
+    .iconos{
+       gap: 2.5rem;
+       margin-left: 3rem;
+  }
+}
