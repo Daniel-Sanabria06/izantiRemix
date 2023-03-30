@@ -39,7 +39,7 @@ const Pagos = () => {
                     <img className='imagenpago' src={nequi} alt="nequi" />
                 </div>
                 <div className=" d-flex">
-                    <p className='h3 mx-5 my-auto'>+573026060889</p>
+                    <p className='h3 linkPaypal mx-5 my-auto'>+573028365520</p>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ const Pagos = () => {
                     <img className='imagenpago' src={bancolombia} alt="Bancolombia" />
                 </div>
                 <div className=" d-flex">
-                    <p className='h3 mx-5 my-auto'>13654931520</p>
+                    <p className='h3 linkPaypal mx-5 my-auto'>13654931520</p>
                 </div>
             </div>
 
@@ -61,7 +61,7 @@ const Pagos = () => {
                     <img className='imagenpago' src={paypal} alt="Paypal" />
                 </div>
                 <div className=" d-flex">
-                    <Link className='h3 mx-5 my-auto'>Link de paypal</Link>
+                    <Link to={'https://www.paypal.com/paypalme/DSan4bria'} target="_blank" rel="noopener noreferrer" className='h3 linkPaypal mx-5 my-auto'>@DSan4bria</Link>
                 </div>
             </div>
 
@@ -72,7 +72,7 @@ const Pagos = () => {
                     <img className='imagenpago w-50 mx-auto' src={contraentrega} alt="Contraentrega" />
                 </div>
                 <div className=" d-flex">
-                   <p className='h3 mx-5 my-auto'>Pago Contraentrega en Cali y Tuluá</p>
+                   <p className='h3 mx-5 linkPaypal my-auto'>Pago Contraentrega en Cali y Tuluá</p>
                 </div>
             </div>    
         </div>
