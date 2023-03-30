@@ -33,7 +33,7 @@ const ArmaniUrl = () => {
 
   const { armaniTotal, publicacionesSimilaresData }= useLoaderData()
 
-  const { nombre, descripcion, color, stock, imagen, precio, tallas, distintivo } = armaniTotal.data[0].attributes
+  const { nombre, descripcion, color, stock, imagen, imagen2, precio, tallas, distintivo } = armaniTotal.data[0].attributes
 
   const location = useLocation()
 
@@ -42,34 +42,76 @@ const ArmaniUrl = () => {
   }, [location.pathname])
 
   const precioConFormato = precio.toLocaleString('es-CO', {currency: 'COP'});
-    
+
+  const linkWhatsapp = `http://wa.me/573176028128?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20${nombre},%20de%20talla:%20`
+
   return (
     <>
       <div className='vistaProducto mt-5'>
         <div className='mt-5'>
-          <div class="boton-modal carrusel container text-center">
-            <label for="btn-modal">
-              <img src={imagen.data.attributes.url} className=" w-100" alt="..."/>  
+          <div className="boton-modal carrusel container text-center">
+            <label htmlFor="btn-modal">
+
+              <div className='container text-center my-5'>
+                  <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active text-center mx-auto ">
+                      <img src={imagen.data.attributes.url} className="" alt="..."/> 
+                      </div>
+                      <div className="carousel-item">
+                      <img src={imagen2.data.attributes.url} className="" alt="..."/> 
+                      </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
+              </div>
+
             </label>
           </div>
 
           <input type="checkbox" id="btn-modal"/>
           
-          <div class="container-modal">
-            <div class="content-modal">
-              <div class="btn-cerrar">
-                <label for="btn-modal" className='mx-1 my-3'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+          <div className="container-modal">
+            <div className="content-modal">
+              <div className="btn-cerrar">
+                <label htmlFor="btn-modal" className='mx-1 my-3'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-x-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                   </svg>
                 </label>
               </div>
 
-              <img src={imagen.data.attributes.url} className=" w-100" alt="..."/> 
+              <div className='container text-center my-5'>
+                  <div id="carouselExampleControls2" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active text-center mx-auto ">
+                      <img src={imagen.data.attributes.url} className="" alt="..."/> 
+                      </div>
+                      <div className="carousel-item">
+                      <img src={imagen2.data.attributes.url} className="" alt="..."/> 
+                      </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
+              </div>
 
             </div>
-            <label for="btn-modal" class="cerrar-modal"></label>
+            <label htmlFor="btn-modal" className="cerrar-modal"></label>
           </div>
         </div>
                 
@@ -81,7 +123,7 @@ const ArmaniUrl = () => {
           <p className='h3 mb-5'>Color: {color}</p>
           <p className='h3 mb-5'>Stock: <small>{stock}</small></p>
           <p className='precio mb-5'>Precio: ${precioConFormato} COP</p>
-          <a className='botonCompra mt-3 mb-5' href="https://api.whatsapp.com/message/7KWXLBWCYBMJO1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">Comprar</a>
+          <a className='botonCompra mt-3 mb-5' href={linkWhatsapp} target="_blank" rel="noopener noreferrer">Comprar</a>
           <div className='w-50 mt-5 text-center mx-auto'>
             <div className='mt-5'> 
               <Precio />
