@@ -316,3 +316,16 @@
   max-width: 14rem; 
   }
 }
+
+
+.carousel-control-prev-icon{
+    background-color: var(--primary);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.carousel-control-next-icon{
+  background-color: var(--primary);
+  padding: 2rem;
+  border-radius: 10px;
+}
