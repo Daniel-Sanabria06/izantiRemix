@@ -19,6 +19,6 @@ export async function getIndex2() {
 }
 
 export async function getArmani(url) {
-    const respuesta = await fetch(`${process.env.API_URL}/armanis?filters[url]=${url}&fields=nombre&fields=precio&fields=descripcion&fields=color&fields=stock&fields=imagen&fields=imagen2&fields=imagen3&fields=tallas&fields=distintivo&fields=url&populate=imagen&populate=imagen2&populate=imagen3`)
+    const respuesta = await fetch(`${process.env.API_URL}/armanis?filters[url]=${url}&fields=nombre&fields=precio&fields=descripcion&fields=color&fields=stock&fields=imagen&fields=imagen2&fields=tallas&fields=distintivo&fields=url&populate=imagen&populate=imagen2`)
     return await respuesta.json()
 }
