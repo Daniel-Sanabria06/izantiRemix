@@ -110,6 +110,8 @@
     background-color: #FBFCFC;
     border-radius: 20px;
     text-decoration: none;
+    display: grid;
+    text-align: center;
 }
 
 .marca .imagen {
