@@ -31,19 +31,23 @@ export function links() {
 
 const ArmaniUrl = () => {
 
+if (typeof window !== 'undefined') {
+
   const { armaniTotal, publicacionesSimilaresData }= useLoaderData()
 
   const { nombre, descripcion, color, stock, imagen, imagen2, precio, tallas, distintivo } = armaniTotal.data[0].attributes
 
   const location = useLocation()
 
+  const rutaTotal = window.location.href
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [location.pathname])
 
   const precioConFormato = precio.toLocaleString('es-CO', {currency: 'COP'});
 
-  const linkWhatsapp = `http://wa.me/573176028128?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20${nombre},%20de%20talla:%20`
+  const linkWhatsapp = `http://wa.me/573176028128?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20${rutaTotal}`
 
   return (
     <>
@@ -165,5 +169,6 @@ const ArmaniUrl = () => {
     </>
   )
 }
-
+}
 export default ArmaniUrl
+

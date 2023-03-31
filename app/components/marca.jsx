@@ -8,7 +8,7 @@ export default function Marca({marca}) {
 
     return (
     <Link className='marca text-center' to={`/catalogoMarcas/${url}`}>
-        <img src={imagen.data.attributes.url} className=' mt-3 imagen' alt={'Imagen Publicación &{nombre}'} />
+        <img src={imagen.data.attributes.url} className='marcaImagen' alt={'Imagen Publicación &{nombre}'} />
         <div className='contenido'>
             <p className='distintivo'>{distintivo}</p>
             <p className='texto'>{nombre}</p>

@@ -22,6 +22,7 @@ export function meta() {
   )
 }
 
+
 export function links() {
   return [
     {
@@ -57,6 +58,7 @@ export function links() {
 
 
 export default function App() {
+  
   return (
      <Document>
         <Outlet/>
