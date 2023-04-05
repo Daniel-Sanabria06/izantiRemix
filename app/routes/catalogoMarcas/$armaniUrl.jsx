@@ -49,6 +49,14 @@ if (typeof window !== 'undefined') {
 
   const linkWhatsapp = `http://wa.me/573176028128?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20${rutaTotal}`
 
+  //Precio promoción
+
+  const descuento = ( precio * 15 ) / 100;
+
+  const precioDescuento = precio - descuento;
+
+  const precioPromocionFinal = precioDescuento.toLocaleString('es-CO', {currency: 'COP'});
+
   return (
     <>
       <div className='vistaProducto mt-5'>
@@ -126,8 +134,13 @@ if (typeof window !== 'undefined') {
           <p className='xs:fs-2 mb-5 fs-1'>{tallas}</p>
           <p className='h3 mb-5'>Color: {color}</p>
           <p className='h3 mb-5'>Stock: <small>{stock}</small></p>
-          <p className='precio mb-5'>Precio: ${precioConFormato} COP</p>
-          <a className='botonCompra mt-3 mb-5' href={linkWhatsapp} target="_blank" rel="noopener noreferrer">Comprar</a>
+
+          <p className='precio mb-2'><small><s>Precio: ${precioConFormato} COP</s></small></p>
+          <p className='precio mb-2'>Precio: ${precioPromocionFinal} COP</p>
+          <small>¡Por tiempo limitado!</small>
+         <hr className='my-5'/>
+
+          <a className='botonCompra my-5' href={linkWhatsapp} target="_blank" rel="noopener noreferrer">Comprar</a>
           <div className='w-50 mt-5 text-center mx-auto'>
             <div className='mt-5'> 
               <Precio />

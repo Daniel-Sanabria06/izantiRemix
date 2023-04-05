@@ -50,7 +50,7 @@ const Pagos = () => {
                     <img className='imagenpago' src={bancolombia} alt="Bancolombia" />
                 </div>
                 <div className=" d-flex">
-                    <p className='h3 linkPaypal mx-5 my-auto'>13654931520</p>
+                    <p className='h3 linkPaypal mx-5 my-auto'>71650493057</p>
                 </div>
             </div>
 
