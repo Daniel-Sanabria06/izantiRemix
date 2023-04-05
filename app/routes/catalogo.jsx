@@ -3,7 +3,7 @@ import { getCatalogo } from "~/models/marcas.server"
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import Marca from "~/components/marca"
-
+import AlertaPromocion from "../components/alertaPromocion"
 import styles from '~/styles/marcas.css'
 
 export function meta() {
@@ -41,6 +41,8 @@ const Catalogo = () => {
   return (
     
     <main className="contenedor">
+  
+     <AlertaPromocion/>
 
       <h2 className="heading mb-5">Nuestro Catálogo</h2>
       

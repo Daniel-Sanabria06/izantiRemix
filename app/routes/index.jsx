@@ -3,6 +3,7 @@ import { getIndex } from "~/models/marcas.server"
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Link } from "react-router-dom"
+import AlertaPromocion from "../components/alertaPromocion"
 import Marca from "~/components/marca"
 import armani from '../../public/img/armani.svg'
 import truereligion from '../../public/img/true-religion.svg'
@@ -52,7 +53,9 @@ const Index = () => {
   }, [location.pathname])
 
   return (
-    
+  <>
+    <AlertaPromocion/>
+
     <main className="contenedor">
 
             <div className='container text-center my-5 carruselpromocion'>
@@ -152,6 +155,7 @@ const Index = () => {
           <hr />
 
     </main>
+  </>
   )
 }
 

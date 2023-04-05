@@ -33,7 +33,7 @@ const Precio = () => {
                         <div className='my-5 d-flex text-center'>
                             <div className="text-center">
                                 <img className='imagenpago' src={bancolombia} alt="Bancolombia" />
-                                <p className='h3 linkPaypal mt-2'>13654931520</p>
+                                <p className='h3 linkPaypal mt-2'>71650493057</p>
                             </div>
                         </div>
 
