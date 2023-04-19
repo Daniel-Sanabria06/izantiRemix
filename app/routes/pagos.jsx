@@ -61,7 +61,7 @@ const Pagos = () => {
                     <img className='imagenpago' src={paypal} alt="Paypal" />
                 </div>
                 <div className=" d-flex">
-                    <Link to={'https://www.paypal.com/paypalme/DSan4bria'} target="_blank" rel="noopener noreferrer" className='h3 linkPaypal mx-5 my-auto'>@DSan4bria</Link>
+                    <Link to={'https://www.paypal.com/paypalme/DSan4bria'} target="_blank" rel="noopener noreferrer" className='h3 linkPaypal mx-5 my-auto'>@PAYPAL</Link>
                 </div>
             </div>
 

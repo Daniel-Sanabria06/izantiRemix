@@ -39,25 +39,28 @@ const Catalogo = () => {
   }, [location.pathname])
 
   return (
-    
-    <main className="contenedor">
-  
-     <AlertaPromocion/>
 
-      <h2 className="heading mb-5">Nuestro Catálogo</h2>
-      
-      {marcas?.length && (
-        <div className="marcas-grid">
-          {marcas.map( marca => (
-            <Marca 
-              key={marca?.id}
-              marca={marca?.attributes}
-            />
-          ))}
-        </div>
-      )}
+   <>
 
-    </main>
+      <AlertaPromocion/>
+
+      <main className="contenedor">  
+
+        <h2 className="heading mb-5">Nuestro Catálogo</h2>
+        
+        {marcas?.length && (
+          <div className="marcas-grid">
+            {marcas.map( marca => (
+              <Marca 
+                key={marca?.id}
+                marca={marca?.attributes}
+              />
+            ))}
+          </div>
+        )}
+
+      </main>
+    </> 
   )
 }
 

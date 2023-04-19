@@ -1,5 +1,6 @@
 import { Link } from '@remix-run/react'
-import logo from '../../public/img/logoredondo.png'
+import logo from '../../public/img/logoredondo.jpg'
+import Sidebar from './sidebar'
 
 const Header = () => {
 
@@ -7,25 +8,7 @@ const Header = () => {
 
     <header className="header">
 
-        <div className="contenedor barra">
-            <Link to='/'>
-                <img className='logo' src={logo} alt="imagen logo" />
-            </Link>
-
-            <nav className="navegacion">
-                <Link to='/' >
-                    Inicio
-                </Link>
-
-                <Link to='/catalogo'>
-                    Catálogo
-                </Link>
-
-                <Link to='/marcas'>
-                    Marcas
-                </Link>
-            </nav>
-        </div>
+      <Sidebar />
         
     </header>
   )
