@@ -42,6 +42,8 @@
     background-color: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .header .logo {
@@ -57,12 +59,15 @@
     flex-direction: column;
     align-items: center;
     max-width: 100rem;
+    text-align: center;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 600px) {
     .barra {
         flex-direction: row;
         justify-content: space-between;
+        text-align: center;
+        display: none;
     }
   }
 
@@ -333,3 +338,118 @@
 .marcaImagen {
   border-radius: 10px;
 }
+
+
+ /*** Sidebar ***/
+
+ @media (max-width: 500px){
+  .imagenLogoSidebar {
+    margin-left: 1rem;
+    display: none;
+  }
+  }
+
+  @media (min-width: 500px){
+      .EspacioSidebar {
+        width: 15rem;
+        margin-left: 15rem;
+      }
+    }
+
+    .EspacioSidebar {
+      width: 15rem;
+      z-index: 2;
+    }
+ 
+
+
+  .link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100rem;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    transition-property: background-color;
+    transition-duration: .6s;
+ }
+
+ .link a {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: var(--white);
+ }
+
+ .link a:first {
+  margin-top: 0rem;
+ }
+
+  .link a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  transition: all .3s;
+}
+
+.link a:hover:after {
+  width: 100%;
+  background: white;
+}
+  
+  @media (min-width: 768px) {
+    .link {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 6rem;
+        margin-left: 4rem;
+        margin-top: 0rem;
+    }
+  }
+
+  .sidebar {
+    background-color: black;
+  }
+
+  .icono {
+    width: 5rem;
+    height: 6rem;
+  }
+
+
+  .menu {
+    margin-left: 50%;
+  }
+
+  .ulCatalogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .linksMenuSidebar{
+    text-align: center;
+    color: var(--white);
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    .linksMenuSidebar li{
+      margin-top: -1rem;
+    }
+  }
+
+
+  .bg-black5 {
+    background-color: black;
+  }
+
+  .bg-black5:hover {
+    color: black;
+  }
+
+  

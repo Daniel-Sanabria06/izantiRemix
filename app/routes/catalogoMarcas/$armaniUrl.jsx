@@ -35,7 +35,7 @@ if (typeof window !== 'undefined') {
 
   const { armaniTotal, publicacionesSimilaresData }= useLoaderData()
 
-  const { nombre, descripcion, color, stock, imagen, imagen2, precio, tallas, distintivo } = armaniTotal.data[0].attributes
+  const { nombre, descripcion, color, stock, imagen, imagen2, precio, genero, tallas, distintivo } = armaniTotal.data[0].attributes
 
   const location = useLocation()
 
@@ -133,6 +133,7 @@ if (typeof window !== 'undefined') {
           <p className='h3 mb-3'>Tallas Disponibles</p>
           <p className='xs:fs-2 mb-5 fs-1'>{tallas}</p>
           <p className='h3 mb-5'>Color: {color}</p>
+          <p className='h3 mb-5'>Para: <small>{genero}</small></p>
           <p className='h3 mb-5'>Stock: <small>{stock}</small></p>
 
           <p className='precio mb-2'><small><s>Precio: ${precioConFormato} COP</s></small></p>

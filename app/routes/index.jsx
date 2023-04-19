@@ -11,6 +11,7 @@ import tommyHilfiguer from '../../public/img/tommy.svg'
 import bannerArmani from '../../public/img/banner-armani.jpg'
 import bannertrue from '../../public/img/bannertrue.png'
 import bannerTommy from '../../public/img/bannerTommy1.png'
+import bannerTommyMujer from '../../public/img/bannerTommyMujer2.jpg'
 import styles from '~/styles/marcas.css'
 
 export function meta() {
@@ -65,7 +66,7 @@ const Index = () => {
                       <img src={bannerArmani} className="" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                      <img src={bannerTommy} className="" alt="..."/>
+                      <img src={bannerTommyMujer} className="" alt="..."/>
                     </div>
                     <div className="carousel-item">
                       <img src={bannertrue} className="" alt="..."/>
